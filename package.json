@@ -1,0 +1,37 @@
+{
+  "name": "mouse-interaction",
+  "version": "1.0.0",
+  "description": "This is an interactive application for my LinkedIn series on web dev concepts.",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "nodemon",
+    "test": "playwright test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/BrianJosephStudio/web-concepts.git"
+  },
+  "author": "Brian Ure",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrianJosephStudio/web-concepts/issues"
+  },
+  "homepage": "https://github.com/BrianJosephStudio/web-concepts#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "react": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "docker": "^1.0.0",
+    "docker-compose": "^0.24.8",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11"
+  }
+}
