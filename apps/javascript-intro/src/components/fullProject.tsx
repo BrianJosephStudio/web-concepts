@@ -7,12 +7,11 @@ const sphereEventName = 'sphereEvent'
 const Sphere = () => {
     const sphereRef = useRef<HTMLDivElement>(null);
     useEffect(() => {
+        const sphereRect = sphereRef.current!.getBoundingClientRect()
         document.addEventListener(sphereEventName, (event: any) => {
             const position= event.detail
-            console.log(position)
-            console.log(sphereRef.current)
-            sphereRef.current!.style.left = `${position.x}px`
-            sphereRef.current!.style.top = `${position.y}px`
+            sphereRef.current!.style.left = `${position.x - (sphereRect.width / 2)}px`
+            sphereRef.current!.style.top = `${position.y - (sphereRect.height /2)}px`
         })
     },[sphereRef])
     return (
@@ -27,9 +26,10 @@ function SphereSpawner() {
     const containerRef = useRef<HTMLDivElement>(null);
 
     const handleMouseMove = (event: MouseEvent<HTMLElement>) => {
+        const containerRect = event.currentTarget.getBoundingClientRect()
         setPosition({
-            x: event.screenX,
-            y: event.screenY
+            x: event.screenX - containerRect.left,
+            y: event.screenY - containerRect.top
         })
 
         const customEvent = new CustomEvent(sphereEventName, { detail: position })

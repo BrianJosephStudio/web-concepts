@@ -41,17 +41,24 @@
   color: #888;
 }
 
-.container{
+.container {
   background-color: hsl(0, 0%, 83%);
   border-radius: 2rem;
-  height: 32rem;
-  width: 32rem;
+  height: 50vh;
+  width: 50vh;
 }
 
-.sphere{
+.sphere {
   position: absolute;
   height: 2rem;
   width: 2rem;
   border-radius: 50%;
   background-color: rgb(211, 37, 101);
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+  .container {
+    height: 50vw;
+    width: 50vw;
+  }
 }
