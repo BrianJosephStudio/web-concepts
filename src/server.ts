@@ -13,6 +13,10 @@ app.use(bodyParser.urlencoded({ extended: true })); // Parse URL-encoded bodies
 
 app.use("/apps", appsRouter)
 
+app.use("/health-check", (req, res) => {
+  res.send("Okay")
+})
+
 app.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
 });
