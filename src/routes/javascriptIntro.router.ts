@@ -5,7 +5,7 @@ import { useProxyIfDev } from '../util/middleware/devProxy'
 
 const router = express.Router()
 
-const appFolder = path.resolve(__dirname, "..", "..", "apps", "javascript-intro")
+const appFolder = path.resolve(__dirname, "..", "..", "..", "apps", "javascript-intro")
 
 //This end point handles a request for the static light mode html file
 router.get("/light-mode", (req, res) => {
